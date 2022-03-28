@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcademyFWeek5.DemoDay1", "AcademyFWeek5.DemoDay1\AcademyFWeek5.DemoDay1.csproj", "{621CBD22-5E77-4407-B085-0F25F93BE913}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Palestra", "Palestra\Palestra.csproj", "{5FBF5BB2-DCB3-4BAF-8154-93C9BAA319FE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{621CBD22-5E77-4407-B085-0F25F93BE913}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{621CBD22-5E77-4407-B085-0F25F93BE913}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{621CBD22-5E77-4407-B085-0F25F93BE913}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{621CBD22-5E77-4407-B085-0F25F93BE913}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FBF5BB2-DCB3-4BAF-8154-93C9BAA319FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FBF5BB2-DCB3-4BAF-8154-93C9BAA319FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FBF5BB2-DCB3-4BAF-8154-93C9BAA319FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FBF5BB2-DCB3-4BAF-8154-93C9BAA319FE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8803B405-0EB7-4057-881E-70FF5A501E16}
+	EndGlobalSection
+EndGlobal
