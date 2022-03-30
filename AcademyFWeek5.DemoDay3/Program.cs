@@ -6,9 +6,11 @@ Console.WriteLine("Hello, World!");
 //Tipi anonimi
 var utente= new {Nome="Mario", Cognome="Rossi", IsReal=true};
 
-Demo.DemoArrayApprofondimento();
-Demo.DemoArrayList();
-
+//Demo.DemoArrayApprofondimento();
+//Demo.DemoArrayList();
+//Demo.DemoHashtable();
+//Demo.DemoListe();
+Demo.DemoGenerics();
 
 
 

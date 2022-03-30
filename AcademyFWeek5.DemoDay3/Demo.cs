@@ -24,7 +24,7 @@ namespace AcademyFWeek5.DemoDay3
             //primo elemento
             Console.WriteLine($"Il primo elemento è :{nomi[0]}");
             //ultimo elemento
-            Console.WriteLine($"L'ultimo elemento è :{nomi[nomi.Length-1]}");
+            Console.WriteLine($"L'ultimo elemento è :{nomi[nomi.Length - 1]}");
             //Accesso tramite index
             Index ultimo = ^1;
             Console.WriteLine($"L'ultimo elemento è :{nomi[ultimo]}"); //{nomi[^1]}
@@ -76,7 +76,7 @@ namespace AcademyFWeek5.DemoDay3
                 Console.WriteLine($"Elemento: {item}");
             }
             //cerco la posizione dell'elemento
-            int posizione=Array.IndexOf(numeri, 5);
+            int posizione = Array.IndexOf(numeri, 5);
             Console.WriteLine($"La posizione del valore 5 è : {posizione}");
 
             //ordinamento
@@ -111,11 +111,11 @@ namespace AcademyFWeek5.DemoDay3
             myArrayList.Add(10);
 
             //Accesso
-            var valore= myArrayList[1];
+            var valore = myArrayList[1];
             Console.WriteLine($"Elemento in posizione 1: {valore}");
 
             //Conteggio elementi
-            int numeroElementi=myArrayList.Count;
+            int numeroElementi = myArrayList.Count;
             Console.WriteLine($"Ci sono {numeroElementi} elementi");
 
             //Rimuovere
@@ -123,9 +123,140 @@ namespace AcademyFWeek5.DemoDay3
             Console.WriteLine($"Ci sono {myArrayList.Count} elementi");
 
             //Verifica se un elemento esiste nel mio Array list
-            bool esiste= myArrayList.Contains(10);
+            bool esiste = myArrayList.Contains(10);
             Console.WriteLine($"Il valore 10 è contenuto nel mio arrayList? {esiste}");
 
         }
+
+        internal static void DemoHashtable()
+        {
+            var miaTabella = new Hashtable();
+
+            miaTabella.Add(1, "uno");
+            miaTabella.Add(2, 2000);
+            miaTabella.Add("oggi", DateTime.Today.ToShortDateString());
+
+            foreach (DictionaryEntry item in miaTabella)
+            {
+                Console.WriteLine($"Chiave: {item.Key}, valore: {item.Value}");
+            }
+
+            //Recuperare valore tramite la chiave
+            var valore = miaTabella[1];
+            Console.WriteLine($"Il valore corrispondente alla key 1 è : {valore}");
+            var valore2 = miaTabella["oggi"];
+            Console.WriteLine($"Il valore corrispondente alla key 'oggi' è : {valore2}");
+
+            //Conteggio o dimensiose
+            Console.WriteLine($"Ci sono {miaTabella.Count} elementi");
+
+            //Rimuovere tramite key
+            miaTabella.Remove(1);
+            Console.WriteLine($"Ci sono {miaTabella.Count} elementi dopo la rimozione della coppia chiave valore con key=1");
+
+            //Stamapare tutte le chiavi
+            Console.WriteLine("Stampa di tutte le chiavi");
+            foreach (var item in miaTabella.Keys)
+            {
+                Console.WriteLine(item);
+            }
+
+            //Stamapare tutte i valori
+            Console.WriteLine("Stampa di tutti i valori");
+            foreach (var item in miaTabella.Values)
+            {
+                Console.WriteLine(item);
+            }
+
+            //verifica se esiste la key
+            bool esisteKey = miaTabella.Contains("oggi");
+            Console.WriteLine($"La key 'oggi' esiste? {esisteKey}");
+            //verifica se esiste un valore
+            bool esisteValue = miaTabella.ContainsValue(3000);
+            Console.WriteLine($"Il valore 3000 esiste? {esisteValue}");
+        }
+
+
+        internal static void DemoListe()
+        {
+            List<Utente> listaUtenti = new List<Utente>();
+            Utente u1 = new Utente() { Nome = "Mario", Cognome = "Rossi", Eta=20 };
+            listaUtenti.Add(u1);
+            Utente u2 = new Utente();
+            u2.Nome = "Bianca";
+            u2.Cognome = "Bianchi";
+            u2.Eta = 99;
+            listaUtenti.Add(u2);            
+            listaUtenti.Add(new Utente() { Nome = "Giuseppe", Cognome = "Verdi", Eta=40 });
+
+            List<Utente> listaUtenti2 = new List<Utente>() { 
+                new Utente() {Nome="Anna", Cognome="Neri", Eta=22},
+                new Utente() { Nome="Pippo", Cognome="Disney", Eta=100},
+                new Utente("Paperino", "Disney", 102)
+            };
+
+
+            var listaNomi= new List<string>()
+            {
+                "Alice",
+                "Renata",
+                "Antonia",
+                "Arianna"
+            };
+
+            //Add
+            listaNomi.Add("Anna");
+
+            //insert
+            listaNomi.Insert(1, "Mirko");
+
+            foreach (var item in listaNomi)
+            {
+                Console.WriteLine(item);
+            }
+
+            Console.WriteLine($"La lista contiene {listaNomi.Count} elementi");
+
+            var intArray = new int[] { 1, 2, 3, 4, 5, 6, 7 };
+            var intList= new List<int> (intArray);
+            intList.Add(9);
+            foreach (var item in intList)
+            {
+                Console.WriteLine(item);
+            }
+
+        }
+
+        internal static void DemoGenerics()
+        {
+            int a = 5;
+            int b = 10;
+            Console.WriteLine($"a: {a} \t b: {b}");
+            Scambio(ref a, ref b);
+            Console.WriteLine($"a: {a} \t b: {b}");
+
+            string nome1 = "Renata";
+            string nome2 = "Alessandro";
+            Console.WriteLine($"nome1: {nome1} \t nome2: {nome2}");
+            ScambioGenerico<string>(ref nome1, ref nome2);
+            Console.WriteLine($"nome1: {nome1} \t nome2: {nome2}");
+            ScambioGenerico(ref a, ref b);
+            Console.WriteLine($"a: {a} \t b: {b}");
+        }
+
+        private static void Scambio(ref int x, ref int y)
+        {
+            int t = x;
+            x = y;
+            y = t;            
+        }
+
+        private static void ScambioGenerico<T>(ref T x, ref T y)
+        {
+            T t = x;
+            x = y;
+            y = t;
+        }
+
     }
 }
