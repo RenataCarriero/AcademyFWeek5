@@ -103,6 +103,8 @@ namespace AcademyFWeek5.DemoDay3
             }
         }
 
+       
+
         internal static void DemoArrayList()
         {
             ArrayList myArrayList = new ArrayList();
@@ -258,5 +260,32 @@ namespace AcademyFWeek5.DemoDay3
             y = t;
         }
 
+
+        internal static void DemoDictionary()
+        {
+            //Dictionary<TKey,TValue>
+            var festivita = new Dictionary<string, DateTime>();
+            festivita.Add("Natale", new DateTime(2022, 12, 25));
+            festivita.Add("Capodanno", new DateTime(2022, 01, 01));
+            festivita.Add("Ferragosto", new DateTime(2022, 08, 15));
+
+            var ragazze = new Dictionary<string, int>()
+            {
+                ["Renata"] = 34,
+                ["Antonia"] = 20
+            };
+
+            if (ragazze.ContainsKey("Renata"))
+            {
+                Console.WriteLine("Renata c'è nell'elenco.");
+                Console.WriteLine($"L'età di Renata è {ragazze["Renata"]}");
+            }
+
+            foreach (var item in ragazze)
+            {
+                Console.WriteLine($"Chiave: {item.Key} \t Valore: {item.Value}");
+            }
+           
+        }
     }
 }

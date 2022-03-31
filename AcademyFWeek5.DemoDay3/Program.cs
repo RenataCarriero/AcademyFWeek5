@@ -10,7 +10,8 @@ var utente= new {Nome="Mario", Cognome="Rossi", IsReal=true};
 //Demo.DemoArrayList();
 //Demo.DemoHashtable();
 //Demo.DemoListe();
-Demo.DemoGenerics();
+//Demo.DemoGenerics();
+Demo.DemoDictionary();
 
 
 
